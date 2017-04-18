@@ -41,7 +41,7 @@ App Planning
 ------------
 
 <p align="center">
-  <img src="" width="350" />
+  <img src="app/images/IMG_3528.JPG" width="350" />
 </p>
 
 Live version
