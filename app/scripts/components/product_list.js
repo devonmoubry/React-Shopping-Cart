@@ -15,7 +15,7 @@ class ProductList extends React.Component {
           <h2>Products</h2>
           { this.props.products.map(function(product) {
             return (
-              <Product product={product} />
+              <Product key={product.id} product={product} />
             )
           }) }
         </section>

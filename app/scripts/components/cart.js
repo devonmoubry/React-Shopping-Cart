@@ -14,7 +14,7 @@ class Cart extends React.Component {
         <h2>Your Cart</h2>
         { this.props.cartItems.map(function(cartItem) {
           return (
-            <CartItem cartItem={cartItem} />
+            <CartItem key={cartItem.id} cartItem={cartItem} />
           )
         }) }
       </section>
