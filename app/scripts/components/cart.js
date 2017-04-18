@@ -9,8 +9,8 @@ class Cart extends React.Component {
 
   render() {
     return (
-
-    );
+      <h2>Cart</h2>
+    )
   }
 }
 
