@@ -5,6 +5,7 @@ import container from '../containers/all.js'
 import Cart from './cart.js'
 import ProductList from './product_list.js'
 
+
 const NavBar = () => {
   return (
     <nav>

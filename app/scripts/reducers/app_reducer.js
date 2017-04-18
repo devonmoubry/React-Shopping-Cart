@@ -2,6 +2,10 @@ const initialState = {
   products: [
     { name: "Thing1", price: 5 },
     { name: "Thing2", price: 11 }
+  ],
+  cartItems: [
+    { name: "Thing1", price: 5 },
+    { name: "Thing2", price: 11 }
   ]
 };
 

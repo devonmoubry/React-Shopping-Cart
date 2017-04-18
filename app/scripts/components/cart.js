@@ -1,6 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import container from '../containers/all.js'
+import CartItem from './cart_item.js'
 
 class Cart extends React.Component {
   constructor(props) {
@@ -9,7 +10,15 @@ class Cart extends React.Component {
 
   render() {
     return (
-      <h2>Cart</h2>
+      <section>
+        <h2>Your Cart</h2>
+        { this.props.cartItems.map(function(cartItem) {
+          return (
+            <CartItem cartItem={cartItem} />
+          )
+        }) }
+      </section>
+
     )
   }
 }
