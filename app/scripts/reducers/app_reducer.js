@@ -1,5 +1,5 @@
 const initialState = {
-  items: [
+  products: [
     { name: "Thing1", price: 5 },
     { name: "Thing2", price: 11 }
   ]

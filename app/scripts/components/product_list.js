@@ -1,6 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import container from '../containers/all.js'
+import Product from './product.js'
 
 class ProductList extends React.Component {
   constructor(props) {
@@ -12,8 +13,11 @@ class ProductList extends React.Component {
       return (
         <section>
           <h2>Products</h2>
-          <h2>Products</h2>
-          <h2>Products</h2>
+          { this.props.products.map(function(product) {
+            return (
+              <Product product={product} />
+            )
+          }) }
         </section>
       )
     }
