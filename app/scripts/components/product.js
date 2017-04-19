@@ -5,10 +5,12 @@ import container from '../containers/all.js'
 class Product extends React.Component {
   constructor(props) {
     super(props)
+    this.addProduct = this.addProduct.bind(this)
   }
 
   addProduct() {
     console.log(('add product to cart'));
+    this.props.dispatch({ type: "ADD_ITEM", product: this.props.product });
   }
 
   render() {

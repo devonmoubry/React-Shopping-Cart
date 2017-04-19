@@ -5,10 +5,11 @@ import container from '../containers/all.js'
 class CartItem extends React.Component {
   constructor(props) {
     super(props)
+    this.removeItem = this.removeItem.bind(this)
   }
 
   removeItem() {
-    console.log('delete, delete');
+    this.props.dispatch({ type: "DELETE_ITEM", cartItem: this.props.cartItem });
   }
 
   render() {
