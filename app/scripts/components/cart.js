@@ -17,6 +17,8 @@ class Cart extends React.Component {
             <CartItem key={cartItem.id} cartItem={cartItem} />
           )
         }) }
+        <h2>Your Total</h2>
+        ${ this.props.cartTotal }
       </section>
 
     )

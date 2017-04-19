@@ -9,8 +9,8 @@ class Product extends React.Component {
   }
 
   addProduct() {
-    console.log(('add product to cart'));
     this.props.dispatch({ type: "ADD_ITEM", product: this.props.product });
+    this.props.dispatch({ type: "UPDATE_TOTAL" });
   }
 
   render() {

@@ -10,6 +10,7 @@ class CartItem extends React.Component {
 
   removeItem() {
     this.props.dispatch({ type: "DELETE_ITEM", cartItem: this.props.cartItem });
+    this.props.dispatch({ type: "UPDATE_TOTAL" });
   }
 
   render() {

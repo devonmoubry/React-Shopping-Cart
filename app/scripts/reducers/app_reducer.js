@@ -6,10 +6,8 @@ const initialState = {
     { name: "Thing4", price: 12, id:'P345' },
     { name: "Thing5", price: 15, id:'P567' }
   ],
-  cartItems: [
-    { name: "Thing1", price: 5, id:'C123' },
-    { name: "Thing2", price: 11, id:'C456' }
-  ]
+  cartItems: [],
+  cartTotal: 0
 };
 
 export default function AppReducer (state, action) {
@@ -29,6 +27,13 @@ export default function AppReducer (state, action) {
       const itemIndex = oldCart.indexOf(action.cartItem);
       oldCart.splice(itemIndex, 1);
       return Object.assign({}, state, { cartItems: oldCart });
+
+    case "UPDATE_TOTAL":
+      let total = 0;
+      state.cartItems.forEach(function(item){
+        total += item.price
+      })
+      return Object.assign({}, state, { cartTotal: total });
 
     default:
       return state;
